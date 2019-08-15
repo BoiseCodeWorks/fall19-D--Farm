@@ -1,5 +1,3 @@
-// let cornWater = 10 - 10
-// let celereezWater = 10 - 10 
 let money = 0
 let justCorn = {
     name: "Just Corn",
@@ -22,10 +20,18 @@ function water(crop) {
     draw()
 }
 
+function harvest(crop) {
+    if (crop === "corn") {
+
+    }
+}
 
 function draw() {
     let moneyFieldElement = document.querySelector("#money-field")
     let cornWaterElement = document.querySelector("#corn-water")
     let celereezWaterElement = document.querySelector("#celereez-water")
     moneyFieldElement.textContent = `Money: $${money}`
+    cornWaterElement.textContent = `Watered: ${justCorn.waterCount}`
+    celereezWaterElement.textContent = `Watered: ${celereez.waterCount}`
 }
+
