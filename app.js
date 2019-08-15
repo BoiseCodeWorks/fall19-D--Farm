@@ -13,3 +13,14 @@ let celereez = {
     waterCount: 0,
 }
 
+function water(crop) {
+    if (crop === "corn") {
+        justCorn.waterCount++
+    } else {
+        celereez.waterCount++
+    }
+}
+
+function draw() {
+    let moneyElement = document.querySelector("#money-field")
+}
