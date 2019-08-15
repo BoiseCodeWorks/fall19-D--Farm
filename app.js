@@ -38,8 +38,8 @@ function draw() {
     let moneyFieldElement = document.querySelector("#money-field")
     let cornWaterElement = document.querySelector("#corn-water")
     let celereezWaterElement = document.querySelector("#celereez-water")
-    moneyFieldElement.textContent = `Money: $${money}`
-    cornWaterElement.textContent = `Watered: ${justCorn.waterCount}`
-    celereezWaterElement.textContent = `Watered: ${celereez.waterCount}`
+    moneyFieldElement.textContent = `Money: $${farm.money}`
+    cornWaterElement.textContent = `Watered: ${farm.corn.waterCount}`
+    celereezWaterElement.textContent = `Watered: ${farm.celereez.waterCount}`
 }
 
