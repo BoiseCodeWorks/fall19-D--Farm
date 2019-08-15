@@ -1,29 +1,31 @@
-let money = 0
-let justCorn = {
-    name: "Just Corn",
-    worth: 100,
-    waterCount: 0,
-}
-
-let celereez = {
-    name: "Celereez",
-    worth: 5,
-    waterCount: 0,
+let farm = {
+    money: 0,
+    corn: {
+        name: "Just Corn",
+        worth: 100,
+        waterCount: 0,
+    },
+    celereez: {
+        name: "Celereez",
+        worth: 5,
+        waterCount: 0,
+    },
 }
 
 function water(crop) {
-    if (crop === "corn") {
-        justCorn.waterCount++
-    } else {
-        celereez.waterCount++
-    }
+    farm[crop].waterCount++
     draw()
 }
 
 function harvest(crop) {
     if (crop === "corn") {
-
+        money += justCorn.worth * justCorn.waterCount
+        justCorn.waterCount = 0
+    } else {
+        money += celereez.worth * celereez.waterCount
+        celereez.waterCount = 0
     }
+    draw()
 }
 
 function draw() {
