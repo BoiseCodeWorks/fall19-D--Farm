@@ -12,19 +12,25 @@ let farm = {
     },
 }
 
-function water(crop) {
-    farm[crop].waterCount++
+
+function water(cropName) {
+    let crop = farm[cropName]
+    crop.waterCount++
     draw()
 }
 
-function harvest(crop) {
-    if (crop === "corn") {
-        money += justCorn.worth * justCorn.waterCount
-        justCorn.waterCount = 0
-    } else {
-        money += celereez.worth * celereez.waterCount
-        celereez.waterCount = 0
-    }
+function harvest(cropName) {
+    let crop = farm[cropName]
+    farm.money += crop.worth * crop.waterCount
+    crop.waterCount = 0
+
+    // if (crop === "corn") {
+    //     money += justCorn.worth * justCorn.waterCount
+    //     justCorn.waterCount = 0
+    // } else {
+    //     money += celereez.worth * celereez.waterCount
+    //     celereez.waterCount = 0
+    // }
     draw()
 }
 
